@@ -1,2 +1,2 @@
 # GitHubHelper
-** Test task for Paralect **
+***Test task for Paralect***
