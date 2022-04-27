@@ -5,9 +5,12 @@ export const SearchInputWrapper = styled.div`
 `; 
 
 export const InputForSearch = styled.input`
-  padding: 8px 0 8px 42px;
+  padding: 8px 0 9px 42px;
   width: 500px;
   min-height: 40px;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.01em;
   border: none;
   border-radius: 6px;
   outline: none;
