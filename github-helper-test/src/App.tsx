@@ -1,9 +1,13 @@
 import React from 'react';
-import './App.css';
+import Header from './components/Header/Header';
+import Home from './pages/Home/Home';
 
 const App: React.FC = () => {
   return (
-    <h1>App</h1>
+    <div>
+      <Header />
+      <Home />
+    </div>
   );
 }
 
