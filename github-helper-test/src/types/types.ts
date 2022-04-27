@@ -1,3 +1,5 @@
+import { ActionsTypes } from './enums';
+
 export type BannerProps = {
   imgPath: string;
   text: string;
@@ -37,3 +39,14 @@ export type GetUserResponse = {
   created_at: string;
   updated_at: string;
 };
+
+export type GlobalState = {
+  userInfo: GetUserResponse | null;
+};
+
+export type AddUserInfoActionType = {
+  type: ActionsTypes.ADD_USER_INFO;
+  payload: GetUserResponse | null;
+};
+
+export type ReducerActionsTypes = AddUserInfoActionType;
