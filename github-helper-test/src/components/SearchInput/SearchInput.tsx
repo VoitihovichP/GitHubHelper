@@ -9,6 +9,6 @@ const SearchInput: FC = () => {
       <S.InputForSearch type="text" placeholder="Enter GitHub username" />
     </S.SearchInputWrapper>
   );
-}
+};
 
 export default SearchInput;

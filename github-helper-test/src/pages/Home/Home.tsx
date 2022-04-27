@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import * as S from './styled'; 
+import * as S from './styled';
 
 import Banner from '../../components/Banner/Banner';
 
@@ -10,9 +10,9 @@ import { BannerTitles } from '../../types/enums';
 const Home: FC = () => {
   return (
     <S.HomeBlock>
-        <Banner imgPath={SearchSVG} text={BannerTitles.START_SEARCHING} />
+      <Banner imgPath={SearchSVG} text={BannerTitles.START_SEARCHING} />
     </S.HomeBlock>
   );
-}
+};
 
 export default Home;

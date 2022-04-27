@@ -3,14 +3,13 @@ import * as S from './styled';
 import GithubLogo from '../../assets/logo/GithubLogo.svg';
 import SearchInput from '../SearchInput/SearchInput';
 
-
 const Header: FC = () => {
   return (
     <S.HeaderBlock>
       <img src={GithubLogo} alt="header-logo" />
       <SearchInput />
     </S.HeaderBlock>
-  )
+  );
 };
 
 export default Header;

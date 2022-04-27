@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const HeaderBlock = styled.header`
   padding: 14px 41px;

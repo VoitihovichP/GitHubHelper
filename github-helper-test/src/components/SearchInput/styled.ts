@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SearchInputWrapper = styled.div`
   position: relative;
-`; 
+`;
 
 export const InputForSearch = styled.input`
   padding: 8px 0 9px 42px;

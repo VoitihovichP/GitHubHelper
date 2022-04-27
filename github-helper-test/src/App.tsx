@@ -9,6 +9,6 @@ const App: React.FC = () => {
       <Home />
     </div>
   );
-}
+};
 
 export default App;

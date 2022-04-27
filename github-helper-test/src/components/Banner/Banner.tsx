@@ -10,7 +10,7 @@ const Banner: FC<BannerProps> = ({ imgPath, text }) => {
       <S.BannerImg src={imgPath} alt="banner-img" />
       <S.BannerText>{text}</S.BannerText>
     </S.BannerWrapper>
-  )
+  );
 };
 
 export default Banner;
