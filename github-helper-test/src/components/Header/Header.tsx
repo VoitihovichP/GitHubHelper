@@ -6,7 +6,7 @@ import SearchInput from '../SearchInput/SearchInput';
 const Header: FC = () => {
   return (
     <S.HeaderBlock>
-      <img src={GithubLogo} alt="header-logo" />
+      <S.Logo src={GithubLogo} alt="header-logo" />
       <SearchInput />
     </S.HeaderBlock>
   );

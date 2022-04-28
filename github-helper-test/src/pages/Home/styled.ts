@@ -5,3 +5,10 @@ export const HomeBlock = styled.div`
   width: 100vw;
   height: calc(100vh - 72px);
 `;
+
+export const MainInfoWrapper = styled.div`
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
+`;

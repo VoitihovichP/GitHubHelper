@@ -16,6 +16,13 @@ export const InputForSearch = styled.input<{ isEmpty: boolean }>`
   border-radius: 6px;
   outline: none;
   transition: 0.3s all;
+  @media (max-width: 768px) {
+    min-height: 30px;
+  }
+  @media (max-width: 576px) {
+    padding-left: 26px;
+    width: 210px;
+  }
 `;
 
 export const SearchIcon = styled.img`

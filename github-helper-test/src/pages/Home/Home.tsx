@@ -18,7 +18,7 @@ const Home: FC = () => {
     <S.HomeBlock>
       {dataIsLoad ? (
         userInfo !== null ? (
-          <div>
+          <S.MainInfoWrapper>
             <UserInfoCard
               photo={userInfo.avatar_url}
               name={userInfo.name}
@@ -27,7 +27,7 @@ const Home: FC = () => {
               followers={userInfo.followers}
               following={userInfo.following}
             />
-          </div>
+          </S.MainInfoWrapper>
         ) : !isFirstSearch ? (
           <Banner imgPath={UserIcon} text={BannerTitles.USER_NOT_FOUND} />
         ) : (

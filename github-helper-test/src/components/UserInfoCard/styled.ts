@@ -10,6 +10,10 @@ export const UserInfoPhoto = styled.img`
   width: 280px;
   height: 280px;
   border-radius: 50%;
+  @media (max-width: 1024px) {
+    width: 250px;
+    height: 250px;
+  }
 `;
 
 export const UserInfoName = styled.h2`
@@ -17,6 +21,9 @@ export const UserInfoName = styled.h2`
   font-weight: 600;
   font-size: 26px;
   color: #000000;
+  @media (max-width: 768px) {
+    font-size: 23px;
+  }
 `;
 
 export const UserInfoGithub = styled.a`
@@ -24,6 +31,9 @@ export const UserInfoGithub = styled.a`
   font-weight: 400;
   font-size: 18px;
   color: #0064eb;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 export const UserFollowingWrapper = styled.div`
@@ -37,4 +47,7 @@ export const UserFollowingInfo = styled.p`
   font-weight: 400;
   font-size: 16px;
   color: #000000;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
