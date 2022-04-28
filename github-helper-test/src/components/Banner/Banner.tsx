@@ -1,7 +1,5 @@
 import React, { FC } from 'react';
 import * as S from './styled';
-import SearchSVG from '../../assets/icons/SearchIcon.svg';
-import UserIcon from '../../assets/icons/UserIcon.svg';
 import { BannerProps } from '../../types/types';
 
 const Banner: FC<BannerProps> = ({ imgPath, text }) => {
