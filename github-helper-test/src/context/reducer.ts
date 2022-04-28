@@ -7,7 +7,12 @@ const reducer = (state = initialState, action: ReducerActionsTypes): GlobalState
 
   switch (type) {
     case ActionsTypes.ADD_USER_INFO:
-      return { ...state, userInfo: payload };
+      return {
+        ...state,
+        dataIsLoad: payload.dataIsLoad,
+        userInfo: payload.userInfo,
+        isFirstSearch: false,
+      };
     default:
       return state;
   }

@@ -40,13 +40,27 @@ export type GetUserResponse = {
   updated_at: string;
 };
 
+export type UserInfoCardProps = {
+  photo: string;
+  name: string;
+  github_name: string;
+  github_url: string;
+  followers: number;
+  following: number;
+};
+
 export type GlobalState = {
+  dataIsLoad: boolean;
+  isFirstSearch: boolean;
   userInfo: GetUserResponse | null;
 };
 
 export type AddUserInfoActionType = {
   type: ActionsTypes.ADD_USER_INFO;
-  payload: GetUserResponse | null;
+  payload: {
+    dataIsLoad: boolean;
+    userInfo: GetUserResponse | null;
+  };
 };
 
 export type ReducerActionsTypes = AddUserInfoActionType;

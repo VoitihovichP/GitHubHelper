@@ -3,6 +3,8 @@ import React, { Dispatch } from 'react';
 import { GlobalState } from '../types/types';
 
 export const initialState: GlobalState = {
+  dataIsLoad: true,
+  isFirstSearch: true,
   userInfo: null,
 };
 

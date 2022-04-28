@@ -1,7 +1,13 @@
 import { ActionsTypes } from './../types/enums';
 import { GetUserResponse, AddUserInfoActionType } from './../types/types';
 
-export const addUSerInfoAction = (payload: GetUserResponse | null): AddUserInfoActionType => ({
+export const addUSerInfoAction = (
+  dataIsLoad: boolean,
+  userInfo: GetUserResponse | null
+): AddUserInfoActionType => ({
   type: ActionsTypes.ADD_USER_INFO,
-  payload: payload,
+  payload: {
+    dataIsLoad: dataIsLoad,
+    userInfo: userInfo,
+  },
 });
