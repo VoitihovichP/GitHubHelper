@@ -24,6 +24,9 @@ const SearchInput: FC = () => {
         setEmptyValue(true);
       } else {
         setEmptyValue(false);
+
+        dispatch(addUSerInfoAction(false, null));
+
         getUser(searchValue).then((data: GetUserResponse | null) => {
           dispatch(addUSerInfoAction(true, data));
         });
