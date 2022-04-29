@@ -9,9 +9,14 @@ const reducer = (state = initialState, action: ReducerActionsTypes): GlobalState
     case ActionsTypes.ADD_USER_INFO:
       return {
         ...state,
-        dataIsLoad: payload.dataIsLoad,
-        userInfo: payload.userInfo,
+        userInfo: payload,
         isFirstSearch: false,
+      };
+    case ActionsTypes.ADD_REPO_INFO:
+      return {
+        ...state,
+        dataIsLoad: payload.dataIsLoad,
+        repoInfo: payload.repoInfo,
       };
     default:
       return state;

@@ -6,6 +6,7 @@ export const initialState: GlobalState = {
   dataIsLoad: true,
   isFirstSearch: true,
   userInfo: null,
+  repoInfo: [],
 };
 
 export const AppContext = React.createContext<{

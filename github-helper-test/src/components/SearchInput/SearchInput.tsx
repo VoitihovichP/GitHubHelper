@@ -1,9 +1,10 @@
 import React, { ChangeEvent, FC, KeyboardEvent, useContext, useState } from 'react';
 import SearchSVG from '../../assets/icons/SearchIcon.svg';
-import { addUSerInfoAction } from '../../context/actionCreators';
+import { addRepoInfoAction, addUSerInfoAction } from '../../context/actionCreators';
 import { AppContext } from '../../context/context';
+import getRepo from '../../requests/getRepo';
 import getUser from '../../requests/getUser';
-import { GetUserResponse } from '../../types/types';
+import { GetRepoResponse, GetUserResponse } from '../../types/types';
 import * as S from './styled';
 
 const SearchInput: FC = () => {
@@ -25,10 +26,14 @@ const SearchInput: FC = () => {
       } else {
         setEmptyValue(false);
 
-        dispatch(addUSerInfoAction(false, null));
+        dispatch(addRepoInfoAction(false, []));
 
         getUser(searchValue).then((data: GetUserResponse | null) => {
-          dispatch(addUSerInfoAction(true, data));
+          dispatch(addUSerInfoAction(data));
+        });
+
+        getRepo(searchValue).then((data: GetRepoResponse) => {
+          dispatch(addRepoInfoAction(true, data));
         });
       }
     }
