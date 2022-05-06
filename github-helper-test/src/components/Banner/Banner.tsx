@@ -1,6 +1,10 @@
 import React, { FC } from 'react';
 import * as S from './styled';
-import { BannerProps } from '../../types/types';
+
+type BannerProps = {
+  imgPath: string;
+  text: string;
+};
 
 const Banner: FC<BannerProps> = ({ imgPath, text }) => {
   return (

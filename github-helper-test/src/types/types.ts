@@ -1,10 +1,5 @@
 import { ActionsTypes } from './enums';
 
-export type BannerProps = {
-  imgPath: string;
-  text: string;
-};
-
 export type GetUserResponse = {
   login: string;
   id: number;

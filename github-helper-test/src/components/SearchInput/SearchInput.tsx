@@ -21,7 +21,7 @@ const SearchInput: FC = () => {
 
   const handleSearch = (e: KeyboardEvent<HTMLInputElement>): void => {
     if (e.key === 'Enter') {
-      if (searchValue === '') {
+      if (!searchValue) {
         setEmptyValue(true);
       } else {
         setEmptyValue(false);
@@ -35,6 +35,7 @@ const SearchInput: FC = () => {
         getRepo(searchValue).then((data: GetRepoResponse) => {
           dispatch(addRepoInfoAction(true, data));
         });
+        //Promise all
       }
     }
   };

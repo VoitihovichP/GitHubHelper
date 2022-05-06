@@ -20,7 +20,7 @@ const Home: FC = () => {
   return (
     <S.HomeBlock>
       {dataIsLoad ? (
-        userInfo !== null ? (
+        userInfo ? (
           <S.MainInfoWrapper>
             <UserInfoCard
               photo={userInfo.avatar_url}
