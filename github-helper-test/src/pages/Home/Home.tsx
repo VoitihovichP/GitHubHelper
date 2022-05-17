@@ -12,6 +12,7 @@ import UserInfoCard from '../../components/UserInfoCard/UserInfoCard';
 import { AppContext } from '../../context/context';
 import Loader from '../../components/Loader/Loader';
 import RepoItem from '../../components/RepoItem/RepoItem';
+import PaginationPanel from '../../components/PaginationPanel/PaginationPanel';
 
 const Home: FC = () => {
   const { state } = useContext(AppContext);
@@ -42,6 +43,7 @@ const Home: FC = () => {
                       description={item.description}
                     />
                   ))}
+                  <PaginationPanel />
                 </S.ReposWrapper>
               </S.Repos>
             ) : (

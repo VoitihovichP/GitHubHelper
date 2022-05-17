@@ -32,7 +32,7 @@ const SearchInput: FC = () => {
           dispatch(addUSerInfoAction(data));
         });
 
-        getRepo(searchValue).then((data: GetRepoResponse) => {
+        getRepo(searchValue, 1).then((data: GetRepoResponse) => {
           dispatch(addRepoInfoAction(true, data));
         });
         //Promise all
