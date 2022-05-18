@@ -21,7 +21,7 @@ export const InputForSearch = styled.input<{ isEmpty: boolean }>`
   }
   @media (max-width: 576px) {
     padding-left: 26px;
-    width: 210px;
+    width: 250px;
   }
 `;
 

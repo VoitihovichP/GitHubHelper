@@ -10,6 +10,9 @@ export const BannerWrapper = styled.div`
   align-items: center;
   gap: 24px;
   max-width: 210px;
+  @media (max-width: 1024px) {
+    gap: 10px;
+  }
 `;
 
 export const BannerImg = styled.img`

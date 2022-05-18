@@ -4,6 +4,12 @@ export const HomeBlock = styled.div`
   padding: 28px 56px;
   min-height: calc(100vh - 72px);
   background: #f9f9f9;
+  @media (max-width: 1440px) {
+    padding: 28px 40px;
+  }
+  @media (max-width: 575px) {
+    padding: 28px 13px;
+  }
 `;
 
 export const MainInfoWrapper = styled.div`
@@ -11,7 +17,9 @@ export const MainInfoWrapper = styled.div`
   height: 100%;
   gap: 85px;
   @media (max-width: 1024px) {
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
   }
 `;
 
@@ -24,6 +32,14 @@ export const ReposTitle = styled.h1`
   font-weight: 600;
   font-size: 32px;
   color: #000000;
+  @media (max-width: 1024px) {
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+  }
+  @media (max-width: 767px) {
+    font-size: 26px;
+  }
 `;
 
 export const ReposWrapper = styled.div`
@@ -35,4 +51,7 @@ export const ReposWrapper = styled.div`
 export const WarningForRepo = styled.div`
   position: relative;
   width: 100%;
+  @media (max-width: 1024px) {
+    min-height: 200px;
+  }
 `;

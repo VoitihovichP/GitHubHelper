@@ -4,6 +4,9 @@ export const UserInfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 292px;
+  @media (max-width: 767px) {
+    align-items: center;
+  }
 `;
 
 export const UserInfoPhoto = styled.img`
@@ -14,6 +17,14 @@ export const UserInfoPhoto = styled.img`
     width: 250px;
     height: 250px;
   }
+  @media (max-width: 768px) {
+    width: 240px;
+    height: 240px;
+  }
+  @media (max-width: 575px) {
+    width: 230px;
+    height: 230px;
+  }
 `;
 
 export const UserInfoName = styled.h2`
@@ -23,6 +34,9 @@ export const UserInfoName = styled.h2`
   color: #000000;
   @media (max-width: 768px) {
     font-size: 23px;
+  }
+  @media (max-width: 575px) {
+    margin-top: 20px;
   }
 `;
 
@@ -41,6 +55,10 @@ export const UserFollowingWrapper = styled.div`
   gap: 20px;
   margin-top: 25px;
   width: 100%;
+  @media (max-width: 767px) {
+    gap: 0;
+    justify-content: space-around;
+  }
 `;
 
 export const UserFollowingInfo = styled.p`
