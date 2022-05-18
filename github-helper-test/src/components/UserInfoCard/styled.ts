@@ -69,3 +69,20 @@ export const UserFollowingInfo = styled.p`
     font-size: 14px;
   }
 `;
+
+export const UserFollowWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  @media (max-width: 992px) {
+    gap: 4px;
+  }
+  @media (max-width: 575px) {
+    gap: 2px;
+  }
+`;
+
+export const UserFollowIcon = styled.img`
+  width: 24px;
+  height: 24px;
+`;
