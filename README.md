@@ -3,10 +3,14 @@
 
 https://github-helper.netlify.app
 
-*Приложение создана в ходе выполнения тестового задания для компании ***Paralect
+Приложение создана в ходе выполнения тестового задания для компании ***Paralect***
 
 Для того что бы запустить проект выполните следующие действия:
+
 `git clone https://github.com/VoitihovichP/github-helper.git`
+
 `cd github-helper-task`
+
 `npm install`
-'npm start'
+
+`npm start`
