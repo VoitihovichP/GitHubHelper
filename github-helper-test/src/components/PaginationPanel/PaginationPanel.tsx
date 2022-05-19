@@ -25,7 +25,7 @@ const PaginationPanel: FC = () => {
   const handlePageChange = (e: { selected: number }) => {
     if (userInfo) {
       getRepo(userInfo.login, e.selected + indexDifference).then((data) => {
-        dispatch(addRepoInfoAction(true, data));
+        dispatch(addRepoInfoAction(false, data));
         if (data.length < itemsPerPage) {
           setItemsTo(userInfo.public_repos);
         } else {

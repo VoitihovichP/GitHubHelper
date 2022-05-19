@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import * as S from './styled';
-import GithubLogo from '../../assets/logo/GithubLogo.svg';
+import GithubLogo from '../../assets/icons/GithubLogo.svg';
 import SearchInput from '../SearchInput/SearchInput';
 
 const Header: FC = () => {

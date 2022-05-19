@@ -33,6 +33,7 @@ export const Paginate = styled(ReactPaginate)`
   li.next a {
     display: block;
     color: #0064eb;
+    font-weight: bold;
     transition: 0.3s all;
     :hover {
       transform: scale(1.3);

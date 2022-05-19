@@ -4,7 +4,6 @@ import { addRepoInfoAction, addUSerInfoAction } from '../../context/actionCreato
 import { AppContext } from '../../context/context';
 import getRepo from '../../requests/getRepo';
 import getUser from '../../requests/getUser';
-import { GetRepoResponse, GetUserResponse } from '../../types/types';
 import * as S from './styled';
 
 const SearchInput: FC = () => {
@@ -12,6 +11,8 @@ const SearchInput: FC = () => {
   const [isEmptyValue, setEmptyValue] = useState<boolean>(false);
 
   const { dispatch } = useContext(AppContext);
+
+  const initialPage = 1;
 
   const onChangeValue = (e: ChangeEvent<HTMLInputElement>): void => {
     if (e.target) {
@@ -26,16 +27,15 @@ const SearchInput: FC = () => {
       } else {
         setEmptyValue(false);
 
-        dispatch(addRepoInfoAction(false, []));
+        dispatch(addRepoInfoAction(true, []));
 
-        getUser(searchValue).then((data: GetUserResponse | null) => {
-          dispatch(addUSerInfoAction(data));
-        });
+        const userRequest = getUser(searchValue);
+        const repoRequest = getRepo(searchValue, initialPage);
 
-        getRepo(searchValue, 1).then((data: GetRepoResponse) => {
-          dispatch(addRepoInfoAction(true, data));
+        Promise.all([userRequest, repoRequest]).then((dataArr) => {
+          dispatch(addUSerInfoAction(dataArr[0]));
+          dispatch(addRepoInfoAction(false, dataArr[1]));
         });
-        //Promise all
       }
     }
   };

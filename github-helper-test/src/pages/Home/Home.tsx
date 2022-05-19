@@ -20,7 +20,7 @@ const Home: FC = () => {
 
   return (
     <S.HomeBlock>
-      {dataIsLoad ? (
+      {!dataIsLoad ? (
         userInfo ? (
           <S.MainInfoWrapper>
             <UserInfoCard
